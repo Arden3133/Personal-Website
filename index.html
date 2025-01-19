@@ -3,88 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arden | Professional Website Design</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>MacGregor Designs</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">MacGregor Designs</div>
-        <nav class="burger-menu">
-            <div class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#services" class="scroll-link">Services</a></li>
-                <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
-                <li><a href="#reviews" class="scroll-link">Reviews</a></li>
-                <li><a href="#contact" class="scroll-link">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="container">
+            <h1>MacGregor Designs</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Welcome to Arden Designs</h1>
-        <p>Crafting stunning websites that elevate your brand.</p>
-        <a href="#contact" class="cta-button scroll-link">Get Started</a>
+        <div class="container">
+            <h2>Your Vision, Our Creation</h2>
+            <p>We specialize in crafting beautiful and functional websites tailored to your needs.</p>
+            <a href="#contact" class="btn" id="get-started">Get Started</a>
+        </div>
     </section>
 
     <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Website Design</h3>
-            <p>Custom and responsive designs tailored to your needs.</p>
-        </div>
-        <div class="service">
-            <h3>Branding</h3>
-            <p>Complete branding solutions for your business.</p>
-        </div>
-        <div class="service">
-            <h3>Consultation</h3>
-            <p>Expert advice to bring your vision to life.</p>
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>Creating stunning, responsive websites that engage users.</p>
+            </div>
+            <div class="service">
+                <h3>E-Commerce Solutions</h3>
+                <p>Building secure and user-friendly online stores to boost your sales.</p>
+            </div>
+            <div class="service">
+                <h3>SEO Optimization</h3>
+                <p>Improving your site's visibility on search engines to attract more visitors.</p>
+            </div>
         </div>
     </section>
 
-    <section id="reviews" class="reviews">
-        <h2>What Our Clients Say</h2>
-        <blockquote>
-            <p>"Arden transformed my online presence with a sleek, modern website. Highly recommend!"</p>
-            <cite>- Jane D.</cite>
-        </blockquote>
-        <blockquote>
-            <p>"Their attention to detail and creativity are unmatched. The best investment I've made."</p>
-            <cite>- Mark S.</cite>
-        </blockquote>
-        <blockquote>
-            <p>"Arden made the entire process seamless and delivered beyond my expectations."</p>
-            <cite>- Sarah L.</cite>
-        </blockquote>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div id="portfolio-items" class="portfolio-items"></div>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 Arden Designs. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MacGregor Designs. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
