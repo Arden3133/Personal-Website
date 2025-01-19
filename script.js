@@ -50,4 +50,3 @@ burgerMenu.addEventListener('click', () => {
 
 // Load portfolio projects on page load
 loadPortfolioProjects();
-
