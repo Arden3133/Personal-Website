@@ -179,6 +179,21 @@ footer {
     text-decoration: none;
 }
 
+.contact {
+    padding: 20px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
