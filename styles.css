@@ -9,6 +9,35 @@ body {
     line-height: 1.6;
     color: #333;
 }
+.about {
+    padding: 20px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.call-to-action {
+    background: #4A90E2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.call-to-action h3 {
+    margin: 0 0 10px;
+}
+
+.call-to-action p {
+    margin: 0 0 15px;
+}
 
 header {
     background: #4A90E2;
