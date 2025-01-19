@@ -1,22 +1,42 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('.scroll-link').forEach(link => {
-    link.addEventListener('click', event => {
-        event.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 50,
-                behavior: 'smooth'
-            });
-        }
+// Smooth scroll for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// Toggle navigation menu on mobile view
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+// Alert on button click
+document.getElementById('get-started').addEventListener('click', function() {
+    alert('Thank you for your interest! We will get back to you shortly.');
 });
+
+// Load portfolio projects
+const portfolioItemsContainer = document.getElementById('portfolio-items');
+
+async function loadPortfolioProjects() {
+    const projectCount = 2; // Adjust this according to the number of projects you have
+    for (let i = 1; i <= projectCount; i++) {
+        try {
+            const response = await fetch(`portfolio/project${i}.json`);
+            const projectData = await response.json();
+            const projectImage = `portfolio/project${i}.jpg`;
+
+            const projectElement = document.createElement('div');
+            projectElement.classList.add('portfolio-item');
+            projectElement.innerHTML = `
+                <img src="${projectImage}" alt="${projectData.title}">
+                <h3>${projectData.title}</h3>
+                <p>${projectData.description}</p>
+            `;
+            portfolioItemsContainer.appendChild(projectElement);
+        } catch (error) {
+            console.error('Error loading project:', error);
+        }
+    }
+}
+
+loadPortfolioProjects();
