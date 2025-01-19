@@ -18,7 +18,7 @@ document.getElementById('get-started').addEventListener('click', function() {
 const portfolioItemsContainer = document.getElementById('portfolio-items');
 
 async function loadPortfolioProjects() {
-    const projectCount = 1; // Adjust this according to the number of projects you have
+    const projectCount = 2; // Adjust this according to the number of projects you have
     for (let i = 1; i <= projectCount; i++) {
         try {
             const response = await fetch(`portfolio/project${i}.json`);
@@ -31,6 +31,7 @@ async function loadPortfolioProjects() {
                 <img src="${projectImage}" alt="${projectData.title}">
                 <h3>${projectData.title}</h3>
                 <p>${projectData.description}</p>
+                <a href="${projectData.url}" target="_blank" class="project-link">View Project</a>
             `;
             portfolioItemsContainer.appendChild(projectElement);
         } catch (error) {
@@ -47,4 +48,6 @@ burgerMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+// Load portfolio projects on page load
 loadPortfolioProjects();
+
