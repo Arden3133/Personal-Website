@@ -6,7 +6,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 50, // Adjust offset for header
+                top: targetElement.offsetTop - 50,
                 behavior: 'smooth'
             });
         }
