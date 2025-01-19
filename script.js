@@ -18,7 +18,7 @@ document.getElementById('get-started').addEventListener('click', function() {
 const portfolioItemsContainer = document.getElementById('portfolio-items');
 
 async function loadPortfolioProjects() {
-    const projectCount = 2; // Adjust this according to the number of projects you have
+    const projectCount = 1; // Adjust this according to the number of projects you have
     for (let i = 1; i <= projectCount; i++) {
         try {
             const response = await fetch(`portfolio/project${i}.json`);
@@ -38,5 +38,13 @@ async function loadPortfolioProjects() {
         }
     }
 }
+
+// Burger menu functionality
+const burgerMenu = document.getElementById('burger-menu');
+const navLinks = document.getElementById('nav-links');
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
 loadPortfolioProjects();
