@@ -2,45 +2,22 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
+    box-sizing: border-box;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #111;
+    padding: 20px;
+    background: #333;
     color: #fff;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.burger-menu {
-    position: relative;
-}
-
-.burger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.burger span {
-    background: white;
-    height: 3px;
-    margin: 3px 0;
-    width: 25px;
-}
-
 .nav-links {
-    display: flex;
     list-style: none;
-    gap: 15px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -50,42 +27,47 @@ body {
 
 .hero {
     text-align: center;
+    padding: 100px 20px;
+    background: #f4f4f4;
+}
+
+.services, .portfolio, .reviews, .contact {
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #111, #444);
-    color: white;
+    text-align: center;
 }
 
-.cta-button {
-    background: #ff9900;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background: #cc7a00;
-}
-
-.services,
-.portfolio,
-.reviews,
-.contact {
+.footer {
+    text-align: center;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.services h2,
-.portfolio h2,
-.reviews h2,
-.contact h2 {
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    background: #111;
+    background: #333;
     color: white;
-    padding: 10px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
